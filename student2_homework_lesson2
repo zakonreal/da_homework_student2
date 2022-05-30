@@ -42,7 +42,7 @@ group by class
 --
 select class, country
 from classes 
-where numguns >=16
+where bore >=16
 
 -- Задание 5: Укажите корабли, потопленные в сражениях в Северной Атлантике (таблица Outcomes, North Atlantic). Вывод: ship.
 --
