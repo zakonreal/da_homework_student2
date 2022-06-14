@@ -1,3 +1,6 @@
+-- домашнее задание (lesson7)
+
+
 --colab/jupyter: https://colab.research.google.com/drive/1j4XdGIU__NYPVpv74vQa9HUOAkxsgUez?usp=sharing
 
 --task1  (lesson7)
