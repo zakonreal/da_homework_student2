@@ -9,7 +9,7 @@
 --task2  (lesson7)
 -- oracle: https://leetcode.com/problems/duplicate-emails/
 
-/* Write your PL/SQL query statement below */
+
 select Email from
 (
     select Email, count(Email) as c 
@@ -22,7 +22,7 @@ where c >= 2
 --task3  (lesson7)
 -- oracle: https://leetcode.com/problems/employees-earning-more-than-their-managers/
 
-/* Write your PL/SQL query statement below */
+
 select e.name as Employee from employee e
 join employee m
 on e.managerId = m.id
@@ -31,7 +31,7 @@ where e.salary > m.salary
 --task4  (lesson7)
 -- oracle: https://leetcode.com/problems/rank-scores/
 
-/* Write your PL/SQL query statement below */
+
 select score, 
 dense_rank() over (order by score desc) as rank 
 from Scores
@@ -39,7 +39,7 @@ from Scores
 --task5  (lesson7)
 -- oracle: https://leetcode.com/problems/combine-two-tables/
 
-/* Write your PL/SQL query statement below */
+
 select firstName, lastName, city, state
 from Person
 left join Address
