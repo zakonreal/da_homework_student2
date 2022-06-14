@@ -56,6 +56,8 @@ select * from all_products_with_index_task5
 -- SQL: Создайте таблицу с синтетическими данными (10 000 строк, 3 колонки, все типы int) 
 -- и заполните ее случайными данными от 0 до 1 000 000. Проведите EXPLAIN операции и сравните базовые операции. 
 
+-- 1 способ (создание таблицы)
+
 create table table_10000_3
 (
   column_name1 int not null,
@@ -90,3 +92,12 @@ end; $$
  explain analyze select max(column_name1), min(column_name2), avg(column_name3) from table_10000_3
  explain analyze select sum(column_name1)+sum(column_name2)+sum(column_name3) from table_10000_3
  
+-- 2 способ (создание таблицы)
+
+create table table1 as
+ select floor(random()*1000000) as x,
+        floor(random()*1000000) as y,
+        floor(random()*1000000) as z
+ from generate_series(1, 100000)
+
+  select * from table1
